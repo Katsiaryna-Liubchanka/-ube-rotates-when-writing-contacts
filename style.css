@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.keys {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-family: Arial serif;
+  text-align: center;
+  margin: 0;
+  animation-name: click;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes click {
+  0% {
+    color: white;
+  }
+
+  50% {
+    color: yellow;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+p {
+  margin-right: 10px;
+}
+
+p.str673::after {
+  content: '\21D0';
+  color: white;
+  font-size: 20px;
+  padding: 3px;
+  border: 2px solid yellow;
+  margin: 0;
+}
+
+p.str674:after {
+  content: '\21D1';
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  border: 2px solid yellow;
+  margin: 0;
+}
+
+p.str676:after {
+  content: '\21D3';
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  border: 2px solid yellow;
+  margin: 0;
+}
+
+p.str675:after {
+  content: '\21D2';
+  color: white;
+  font-size: 20px;
+  padding: 3px;
+  border: 2px solid yellow;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  margin: 150px auto;
+  width: 300px;
+  height: 300px;
+  perspective: 500px;
+}
+
+.cube {
+  width: inherit;
+  height: inherit;
+  transform-style: preserve-3d;
+}
+
+.side {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: 5px solid white;
+  font: normal 70px Arial;
+  text-align: center;
+  line-height: 300px;
+  color: white;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: translateZ(150px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+}
